@@ -2,16 +2,47 @@ project:
   type: website
 
 website:
-  title: "scraper"
+  title: "University Relations web-scraper"
   navbar:
-    left:
+    right:
       - href: index.qmd
-        text: Home
+        text: About
       - about.qmd
 
-format:
+page-footer: 
+  border: true
+  left: "Integration Team"
+
+sidebar:
+  - title: "dashboard"
+    style: "docked"
+    background: light
+    contents:
+      - text: "dashboard"
+        file: projects.qmd
+      - text: "---"
+      - text: "Project 1"
+        file: Projects/project1.qmd
+      - text: "---"
+      - text: "Project 2"
+        file: Projects/project2.qmd
+      - text: "---"
+      - text: "Project 3"
+        file: Projects/project3.qmd
+      - text: "---"
+      - text: "Project 4"
+        file: Projects/project4.qmd
+      - text: "---"
+      - text: "Project 5"
+        file: Projects/project5.qmd
+
+format:  
   html:
-    theme: cosmo
+    theme: #see this link to customize the theme with css (https://quarto.org/docs/output-formats/html-themes.html#dark-mode)
+      light: flatly # more themes can be found [here](https://quarto.org/docs/output-formats/html-themes.html)
+      dark: darkly
+      #light: cosmo
+      #dark: [cosmo, theme-dark.scss]
     css: styles.css
     toc: true
 
